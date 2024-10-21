@@ -46,7 +46,7 @@ public class AdminViewTrainFwd extends HttpServlet {
 							+ train.getFrom_stn() + "&toStn=" + train.getTo_stn() + "'>" + train.getTr_name()
 							+ "</a></td>" + "<td>" + train.getTr_no() + "</td>" + "<td>" + train.getFrom_stn() + "</td>"
 							+ "<td>" + train.getTo_stn() + "</td>" + "<td>" + train.getSeats() + "</td>" + "<td>"
-							+ train.getFare() + " RS</td>" + "<td><a href='adminupdatetrain?trainnumber="
+							+ train.getFare() + " RS</td>" + "<td><a  href='adminupdatetrain?trainnumber="
 							+ train.getTr_no() + "'>Update</a></td>" + "</tr>");
 				}
 				pw.println("</table></div>");

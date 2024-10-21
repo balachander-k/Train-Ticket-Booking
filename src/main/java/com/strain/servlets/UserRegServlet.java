@@ -15,6 +15,7 @@ import com.strain.beans.UserBean;
 import com.strain.constant.UserRole;
 import com.strain.service.UserService;
 import com.strain.service.impl.UserServiceImpl;
+import com.strain.utility.PasswordEncryption;
 
 @SuppressWarnings("serial")
 @WebServlet("/UserRegServlet")
@@ -27,8 +28,9 @@ public class UserRegServlet extends HttpServlet {
 		PrintWriter pw = res.getWriter();
 		try {
 			UserBean user = new UserBean();
+			PasswordEncryption passwordEncrypt = new PasswordEncryption();
 			user.setMailId(req.getParameter("mailid"));
-			user.setPWord(req.getParameter("pword"));
+			user.setPWord(passwordEncrypt.encrypt(req.getParameter("pword"),15));
 			user.setFName(req.getParameter("firstname"));
 			user.setLName(req.getParameter("lastname"));
 			user.setAddr(req.getParameter("address"));

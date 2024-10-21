@@ -13,6 +13,7 @@ import com.strain.constant.ResponseCode;
 import com.strain.constant.UserRole;
 import com.strain.service.UserService;
 import com.strain.utility.DBUtil;
+import com.strain.utility.PasswordEncryption;
 
 public class UserServiceImpl implements UserService {
 
@@ -157,12 +158,14 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public UserBean loginUser(String username, String password) throws TrainException {
 		UserBean customer = null;
+		PasswordEncryption passwordEncrypt = new PasswordEncryption();
 		String query = "SELECT * FROM " + TABLE_NAME + " WHERE MAILID=? AND PWORD=?";
 		try {
 			Connection con = DBUtil.getConnection();
+			
 			PreparedStatement ps = con.prepareStatement(query);
 			ps.setString(1, username);
-			ps.setString(2, password);
+			ps.setString(2, passwordEncrypt.encrypt(password, 15));
 			ResultSet rs = ps.executeQuery();
 			if (rs.next()) {
 				customer = new UserBean();
