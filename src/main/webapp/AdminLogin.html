@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>E-Trains</title>
+<link rel="stylesheet" href="UserHome_Css.css">
+</head>
+<style>
+	a{
+		text-decoration: none;
+		color:rgb(29, 68, 126);
+	}
+	.main {
+    display: flex; /* Use flexbox layout */;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically (if needed) */
+    flex-direction: row; /* Stack items vertically */
+    margin: 20px auto; /* Center the div itself with margin */
+    width: 80%; /* Adjust width as necessary */
+}
+
+.menu{
+	margin: 10px;
+}
+</style>
+<body>
+	<header>
+		<h1 class="hd">Indian Railway Catering and Tourism Corporation</h1>
+		<div class="main">
+			<span class="menu"> <a href="UserLogin.html">Login as User</a>
+			</span> <span class="menu"> <a href="UserRegister.html">New User
+					Register</a>
+			</span> <span class="menu"> <a href="AdminLogin.html">Login as
+					Admin</a>
+			</span>
+		</div>
+	</header>
+	
+	<div class="tab green">Admin Login</div>
+	<form action="adminlogin" class="tab brown" method="post">
+		<br />UserName: <input type="text" name="uname"><br />
+		<br /> Password: <input type="password" name="pword"><br />
+		<br /> <input type="submit" value=" LOGIN "><br />
+
+	</form>
+	<br />
+
+</body>
+</html>

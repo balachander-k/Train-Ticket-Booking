@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+body {
+    background-color: #f4f7f9; /* Light gray background */
+    font-family: Arial, sans-serif; /* Modern font */
+    margin: 0;
+    padding: 0;
+}
+
+
+.hd {
+    text-align: center;
+    padding: 20px;
+    color: #e9f4ff; /* Dark navy color */
+    font-weight: bold;
+    font-size: 36px;
+	background-color: #093381;
+ 
+	 /* Underline effect in blue */
+}
+
+.nav {
+    display: flex; /* Use flexbox for the header */
+    justify-content: center; /* Center the menu items */
+    flex-wrap: wrap; /* Allow wrapping to next line if necessary */
+    margin: 20px 0; /* Add some margin above and below */
+}
+
+.home {
+    margin: 0 10px; /* Add horizontal spacing between menu items */
+}
+
+.home .menu a{
+	text-decoration: none;
+	color:#2c3e50;
+}
+
+.menu {
+    border: 1px solid #2980b9; /* Blue border */
+    border-radius: 10px;
+    background-color: white;
+    color: #2980b9; /* Blue text */
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    display: inline-block;
+    padding: 10px 15px;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+}
+
+.menu:hover {
+   /* ange background on hover */ 
+    transform: scale(1.05); /* Slight scaling effect */
+}
+
+
+.tab {
+    border: 1px solid #2980b9; /* Consistent border color */
+    border-radius: 15px;
+    background-color: #f4f6f7; /* Soft light gray for a clean look */
+    margin: 20px auto; /* Center the tab */
+    width: 80%; /* Full width with margin */
+    max-width: 800px; /* Maximum width */
+    color: #34495e; /* Dark gray text */
+    font-weight: bold;
+    font-size: 16px; /* Slightly larger font size */
+    text-align: center;
+    padding: 20px; /* Increased padding for better spacing */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle box shadow for depth */
+}
+
+.table {
+   
+    border-radius: 15px;
+    margin: 20px auto; /* Center the tab */
+    width: 100%; /* Full width with margin */
+    max-width: 800px; /* Maximum width */
+    color: #34495e; /* Dark gray text */
+    font-weight: bold;
+    font-size: 16px; /* Slightly larger font size */
+    text-align: center;
+    padding: 20px; /* Increased padding for better spacing */
+}
+
+
+footer {
+    margin-top: 50px;
+    text-align: center;
+    background-color: #2980b9; /* Footer background color */
+    color: white; /* Footer text color */
+    padding: 15px;
+	display: none;
+}
+
+footer address {
+    font-style: normal; /* Normal style for address */
+}
+
+
+
+
+input[type="text"],
+input[type="password"], 
+input[type="number"],
+input[type="email"]
+{
+    width: 50%; /* Full width with padding */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #bdc3c7; /* Light gray border */
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #2980b9; /* Button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+input[type="submit"]:hover {
+    background-color: #1f618d; /* Darker shade on hover */
+}
+
+table {
+    border-collapse: collapse; /* Remove double borders */
+    width: 100%; /* Full width */
+    margin: 20px auto; /* Center the table */
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #bdc3c7; /* Light gray border */
+}
+
+th {
+    background-color: #ecf0f1; /* Light gray header */
+    color: #34495e; /* Dark gray text */
+}
+
+tr:hover {
+    background-color: #d5dbdb; /* Hover effect for rows */
+}
